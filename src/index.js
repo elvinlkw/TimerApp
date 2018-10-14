@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Component files
+import Navbar from './components/Navbar';
+import Countdown from './components/Countdown';
+import Timer from './components/Timer';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+    <div>
+        <Router>
+            <div>
+                <Navbar/>
+                <Route exact path="/" component={Timer}></Route>
+                <Route exact path="/countdown" component={Countdown}></Route>
+            </div>
+        </Router>
+    </div>,
+    document.getElementById('root')
+);
