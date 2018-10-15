@@ -8,27 +8,54 @@ class Timer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            seconds: 0
+            seconds: 0,
+            timerStatus: 'stopped'
         }
+        this.handleStatusChange = this.handleStatusChange.bind(this);
+        this.handleStart = this.handleStart.bind(this);
     }
-    componentDidMount(){
-        var curr = Math.floor(Date.now()/1000);
-        this.timer = setInterval(()=>{
-            this.setState({
-                seconds: Math.floor(Date.now()/1000) - curr
-            });
-        }, 1000)
+    componentDidUpdate(prevProps, prevState){
+        if(this.state.timerStatus !== prevState.timerStatus){
+            switch (this.state.timerStatus){
+                case 'started':
+                    this.handleStart();
+                    break;
+                case 'paused':
+                    clearInterval(this.timer);
+                    this.timer = undefined;
+                    break;
+                case 'stopped':
+                    this.setState({
+                        seconds: 0
+                    })
+                    clearInterval(this.timer);
+                    this.timer = undefined;
+                    break;
+                default:
+                    break
+            }
+        }
     }
     componentWillUnmount(){
         clearInterval(this.timer);
     }
+    handleStatusChange(newStatus){
+        this.setState({timerStatus: newStatus});
+    }
+    handleStart(){
+        this.timer = setInterval(() => {
+            this.setState({
+                seconds: this.state.seconds + 1
+            })
+        }, 1000);
+    }
     render() {
-        var {seconds} = this.state;
+        var {seconds, timerStatus} = this.state;
         return (
             <div className="container">
                 <h2 id="page-title">Timer App</h2>
                 <Clock seconds={seconds}/>
-                <Controls/>
+                <Controls timerStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
             </div>
         );
     }
