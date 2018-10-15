@@ -1,0 +1,10 @@
+#controls{
+    display:flex;
+    justify-content: space-between;
+    width: 12rem;
+    margin: 0 auto;
+}
+
+button{
+    width: 5rem;
+}

@@ -1,0 +1,20 @@
+.clock-container{
+    margin: 2rem;
+}
+
+.clock{
+    margin: 0 auto;
+    width: 15rem;
+    height: 15rem;
+    border: 3px darkslategray solid;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+#clock-text{
+    font-size: 3rem;
+    color: #fff;
+}
