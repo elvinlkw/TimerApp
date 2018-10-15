@@ -1,9 +1,8 @@
 .clock-container{
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 .clock{
-    margin: 0 auto;
     width: 15rem;
     height: 15rem;
     border: 3px darkslategray solid;

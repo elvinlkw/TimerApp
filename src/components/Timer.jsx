@@ -53,7 +53,7 @@ class Timer extends Component {
         var {seconds, timerStatus} = this.state;
         return (
             <div className="container">
-                <h2 id="page-title">Timer App</h2>
+                <h2 className="text-center">Timer App</h2>
                 <Clock seconds={seconds}/>
                 <Controls timerStatus={timerStatus} onStatusChange={this.handleStatusChange}/>
             </div>

@@ -21,7 +21,7 @@ class Clock extends Component {
         var {seconds} = this.props;
         return ( 
             <div className="clock-container">
-                <div className="clock">
+                <div className="clock mx-auto">
                     {this.formatSeconds(seconds)}
                 </div>
             </div>

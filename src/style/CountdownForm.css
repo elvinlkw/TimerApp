@@ -1,0 +1,19 @@
+.form-group{
+    width: 15rem;
+}
+
+input:focus::-webkit-input-placeholder{
+    color: transparent;
+}
+
+input:focus::-moz-placeholder{
+    color:transparent;
+}
+
+input:focus::-ms-input-placeholder{
+    color:transparent;
+}
+
+.btn{
+    margin-top: 1rem;
+}
