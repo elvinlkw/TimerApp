@@ -7,12 +7,14 @@ class Controls extends Component {
         return this.props.onStatusChange(newStatus);
         
     }
+    componentDidUpdate(prevProps, prevState){
+    }
     render() { 
         var {timerStatus} = this.props;
 
         var renderingStartStop = () => {
             if(timerStatus === 'started'){
-                return <button type="button" className="btn btn-secondary" onClick={() => this.onStatusChange('paused')}>Pause</button>
+                return <button type="button" ref="buttons" className="btn btn-secondary" onClick={() => this.onStatusChange('paused')}>Pause</button>
             }else{
                 return <button type="button" className="btn btn-primary" onClick={() => this.onStatusChange('started')}>Start</button>
             }
