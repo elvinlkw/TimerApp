@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './../style/Timer.css';
+import './../style/main.css';
 import Clock from './Clock';
 import Controls from './Controls';
 

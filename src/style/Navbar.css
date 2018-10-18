@@ -1,3 +1,15 @@
+.navbar{
+    height: 4rem;
+}
+
 .navbar-brand{
+    font-weight: bold;
+}
+
+.project{
+    color: goldenrod;
+}
+
+.active-link{
     font-weight: bold;
 }

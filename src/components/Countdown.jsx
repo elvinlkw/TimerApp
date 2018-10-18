@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Clock from './Clock';
 import Controls from './Controls';
 import CountdownForm from './CountdownForm';
-import './../style/Countdown.css';
+import './../style/main.css';
 
 class Countdown extends Component {
     constructor(props){
