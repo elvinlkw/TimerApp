@@ -1,7 +1,6 @@
 {
   "name": "timer-app",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://elvinlkw.github.io/timer-app",
   "dependencies": {
     "bootstrap": "^4.1.3",
