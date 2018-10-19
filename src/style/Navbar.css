@@ -1,15 +1,40 @@
+a:hover{
+    text-decoration: none;
+}
+
+a{
+    color:white;
+}
+
+a > i:hover{
+    color:lightgray;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .navbar{
     height: 4rem;
+    background: #191919;
 }
 
 .navbar-brand{
     font-weight: bold;
+    color:white;
 }
 
 .project{
-    color: goldenrod;
+    color: white;
 }
 
-.active-link{
+.nav-link{
+    color:white;
+}
+
+.nav-link:hover{
+    color:lightgrey;
+}
+
+.active{
     font-weight: bold;
+    color:red;
 }

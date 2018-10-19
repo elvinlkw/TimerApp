@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
 // Component files
 import Navbar from './components/Navbar';
@@ -10,7 +11,7 @@ import Timer from './components/Timer';
 
 ReactDOM.render(
     <div>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <div>
                 <Navbar/>
                 <Route exact path="/" component={Timer}></Route>
