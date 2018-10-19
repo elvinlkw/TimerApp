@@ -5,10 +5,17 @@ class CountdownForm extends Component {
     onFormSubmit(e){
         e.preventDefault();
         var seconds = this.refs.totalSeconds.value;
-        if(seconds.length > 0){
-            this.refs.totalSeconds.value = '';
+    
+        // Test only numbers are used in the input field
+        if(seconds.length > 0 && seconds.search(/^[0-9]*$/) > -1){
             this.props.onFormSubmit(seconds);
+        } else if(seconds.length === 0){
+            alert('Input Field Cannot Be Empty');
+        } else{
+            alert('Invalid Input');
         }
+        this.refs.totalSeconds.value = '';
+        this.refs.totalSeconds.focus();
 
     }
     render() { 

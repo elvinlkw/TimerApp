@@ -1,23 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
-// Component files
-import Navbar from './components/Navbar';
-import Countdown from './components/Countdown';
-import Timer from './components/Timer';
+import App from './components/App';
 
 ReactDOM.render(
-    <div>
-        <Router basename={process.env.PUBLIC_URL}>
-            <div>
-                <Navbar/>
-                <Route exact path="/" component={Timer}></Route>
-                <Route exact path="/countdown" component={Countdown}></Route>
-            </div>
-        </Router>
-    </div>,
+    <Router>
+        <App/>
+    </Router>,
     document.getElementById('root')
 );
