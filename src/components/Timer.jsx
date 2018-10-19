@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './../style/main.css';
 import Clock from './Clock';
 import Controls from './Controls';

@@ -6,13 +6,14 @@ class CountdownForm extends Component {
         e.preventDefault();
         var seconds = this.refs.totalSeconds.value;
     
-        // Test only numbers are used in the input field
-        if(seconds.length > 0 && seconds.search(/^[0-9]*$/) > -1){
-            this.props.onFormSubmit(seconds);
-        } else if(seconds.length === 0){
-            alert('Input Field Cannot Be Empty');
+        // Test only numbers are used in the input field and 
+        // input field cannot be empty
+        if(seconds.length < 1){
+            alert('Input field cannot be empty');
+        } else if (seconds.search(/^[0-9]*$/) < 0){
+            alert('Invalid Input: only numbers can be input');
         } else{
-            alert('Invalid Input');
+            this.props.onFormSubmit(seconds);
         }
         this.refs.totalSeconds.value = '';
         this.refs.totalSeconds.focus();

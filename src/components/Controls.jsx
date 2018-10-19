@@ -3,15 +3,12 @@ import './../style/Controls.css';
 
 class Controls extends Component {
     onStatusChange(newStatus){
-        
-        return this.props.onStatusChange(newStatus);
-        
-    }
-    componentDidUpdate(prevProps, prevState){
+        this.props.onStatusChange(newStatus);
     }
     render() { 
         var {timerStatus} = this.props;
 
+        // will render either start or pause button depending on status of program
         var renderingStartStop = () => {
             if(timerStatus === 'started'){
                 return <button type="button" ref="buttons" className="btn btn-secondary" onClick={() => this.onStatusChange('paused')}>Pause</button>
