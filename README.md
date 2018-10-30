@@ -1,1 +1,1 @@
-Simple React App
+Alt-H1 React Timer App

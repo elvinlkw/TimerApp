@@ -5,7 +5,7 @@ import './../style/Navbar.css';
 class Navbar extends Component {
     render() { 
         return (
-            <nav className="navbar navbar-expand-lg bg-dark">
+            <nav className="navbar navbar-expand bg-dark">
                 <span className="navbar-brand">ReactTimer</span>
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
