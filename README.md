@@ -7,8 +7,7 @@ A react Timer and Countdown application implemented using Facebook's `create-rea
 
 Ensure `npm` and `git bash` are installed.
 
-> git clone https<span>://github.com/elvinlkw/timer-app.git</span>
-
+> git clone https<span>://github.com/elvinlkw/timer-app.git</span></br>
 > cd timer-app && git install
 
 ### Running the Application
